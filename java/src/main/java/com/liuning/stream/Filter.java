@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
  * @description Java Stream Filter
  * @since 2020-08-05 00:04
  */
-public class FilterTest {
+public class Filter {
 
     public static void main(String[] args) {
 

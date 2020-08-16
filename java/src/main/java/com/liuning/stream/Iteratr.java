@@ -6,7 +6,7 @@ import java.util.stream.Stream;
  * @author liuning
  * @since 2020-08-08 23:32
  */
-public class IteratrTest {
+public class Iteratr {
     int x = 1;
 
     Stream<Integer> numbers() {
@@ -18,7 +18,7 @@ public class IteratrTest {
     }
 
     public static void main(String[] args) {
-        new IteratrTest().numbers()
+        new Iteratr().numbers()
                 .skip(20) // 过滤前 20 个
                 .limit(30) // 然后取 10 个
                 .forEach(System.out::println);
