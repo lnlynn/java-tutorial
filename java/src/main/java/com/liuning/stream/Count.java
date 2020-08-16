@@ -5,8 +5,6 @@ import com.liuning.stream.entity.Track;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-import java.util.function.BinaryOperator;
-import java.util.stream.Stream;
 
 /**
  * @author liuning
@@ -37,13 +35,6 @@ public class Count {
             }
         }
         System.out.println(num);
-
-        int count2 = Stream.of(1, 2, 3)
-                .reduce(0,(acc,element)-> acc + element);
-        System.out.println(count2);
-
-        BinaryOperator<Integer> accumulator = (acc, element) -> acc + element;
-        System.out.println(accumulator.apply(99,2));
 
     }
 }
