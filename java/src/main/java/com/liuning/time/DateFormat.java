@@ -2,6 +2,7 @@ package com.liuning.time;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 /**
@@ -18,5 +19,17 @@ public class DateFormat {
         System.out.println(LocalDate.now());
         //2020-08-10T23:31:07.160
         System.out.println(LocalDateTime.now());
+
+        LocalDate afterDate = LocalDate.of(2021, 1, 9);
+        LocalDate beforeDate = LocalDate.of(2019, 2, 10);
+        //月数
+        long betweenMONTHS = ChronoUnit.MONTHS.between(beforeDate, afterDate);
+        //年数
+        long between1YEARS = ChronoUnit.YEARS.between(beforeDate, afterDate);
+        //天数
+        long between1DAYS = ChronoUnit.DAYS.between(beforeDate, afterDate);
+        System.out.println(betweenMONTHS);
+        System.out.println(between1YEARS);
+        System.out.println(between1DAYS);
     }
 }
