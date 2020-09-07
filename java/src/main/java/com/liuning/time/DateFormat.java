@@ -2,6 +2,7 @@ package com.liuning.time;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
@@ -31,5 +32,11 @@ public class DateFormat {
         System.out.println(betweenMONTHS);
         System.out.println(between1YEARS);
         System.out.println(between1DAYS);
+
+        LocalDateTime localDateTime = LocalDateTime.now().plusMinutes(30);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        System.out.println("日期格式化：" + localDateTime.format(formatter));
+        LocalDateTime dateTime = LocalDateTime.parse("2018-07-02 16:39:37", formatter);
+        System.out.println("日期转换：" +dateTime);
     }
 }
