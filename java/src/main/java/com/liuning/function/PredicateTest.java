@@ -18,16 +18,16 @@ public class PredicateTest {
         System.out.println(predicate.test("zhangsan"));
 
         System.out.println(compareValue(4, num -> num > 3));
-        System.out.println(compareValue(5, value -> value % 2 == 0));
+        System.out.println(compareValue("5", value -> value.equals("liuning")));
 
         System.out.println(multiCompareValue(6, value -> value % 2 == 0, value -> value > 4));
     }
 
-    public static boolean compareValue(int value, Predicate<Integer> predicate) {
+    public static <T> boolean compareValue(T value, Predicate<T> predicate) {
         return predicate.test(value);
     }
 
-    public static boolean multiCompareValue(int value, Predicate<Integer> predicateOne, Predicate<Integer> predicateTwo) {
+    public static <T> boolean multiCompareValue(T value, Predicate<T> predicateOne, Predicate<T> predicateTwo) {
         return predicateOne.and(predicateTwo).test(value);
     }
 }
