@@ -36,7 +36,7 @@ public class Reduce {
          * Optional
          */
         Optional<String> optional = Optional.of("Str");
-        Optional emptyOptional = Optional.empty();
+        Optional<String> emptyOptional = Optional.empty();
         Optional<String> alsoEmpty = Optional.ofNullable(null);
         System.out.println(optional.isPresent());
         System.out.println(emptyOptional.isPresent());
