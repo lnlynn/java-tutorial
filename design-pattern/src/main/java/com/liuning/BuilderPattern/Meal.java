@@ -10,7 +10,7 @@ import java.util.List;
  * @since 2020-09-18 23:36
  */
 public class Meal {
-    private List<Item> items = new ArrayList<Item>();
+    private final List<Item> items = new ArrayList<>();
 
     public void addItem(Item item){
         items.add(item);
