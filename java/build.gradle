@@ -14,4 +14,5 @@ dependencies {
     compile group: 'com.alibaba', name: 'fastjson', version: '1.2.73'
     compile group: 'org.ow2.asm', name: 'asm', version: '8.0.1'
     compile group: 'org.javassist', name: 'javassist', version: '3.27.0-GA'
+    compile group: 'cglib', name: 'cglib', version: '3.3.0'
 }
