@@ -4,6 +4,8 @@ import com.liuning.FactoryPattern.impl.Circle;
 import com.liuning.FactoryPattern.impl.Rectangle;
 import com.liuning.FactoryPattern.impl.Square;
 
+import java.util.NoSuchElementException;
+
 /**
  * ShapeFactory
  *
@@ -21,7 +23,7 @@ public class ShapeFactory {
                 return new Rectangle();
             case "SQUARE":
                 return new Square();
+            default: throw new NoSuchElementException();
         }
-        return null;
     }
 }
