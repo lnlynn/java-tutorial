@@ -26,4 +26,21 @@ public class ShapeFactory {
             default: throw new NoSuchElementException();
         }
     }
+
+    /**
+     * 使用反射机制实现工厂模式
+     *
+     * @param className 类名
+     * @return 对象
+     */
+    public static Shape getShapeReflect(String className) {
+        Shape shape = null;
+        try {
+            shape = (Shape) Class.forName(className).newInstance();
+        } catch (InstantiationException | ClassNotFoundException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return shape;
+    }
+
 }
