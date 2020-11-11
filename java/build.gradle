@@ -2,6 +2,10 @@ plugins {
     id 'java'
 }
 
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
 group 'com.liuning'
 version '1.0.0-SNAPSHOT'
 

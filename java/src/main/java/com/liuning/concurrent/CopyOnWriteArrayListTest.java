@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class CopyOnWriteListTest {
+public class CopyOnWriteArrayListTest {
 
     public static void main(String[] args) throws InterruptedException {
         List<String> list = new CopyOnWriteArrayList<>();
@@ -18,7 +18,7 @@ public class CopyOnWriteListTest {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                list.remove(3);
+                list.remove(2);
             }
         });
 

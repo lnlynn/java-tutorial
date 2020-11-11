@@ -2,6 +2,11 @@ plugins {
     id 'java'
 }
 
+//解决编译时的中文乱码问题
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
 group 'com.liuning'
 version '1.0.0-SNAPSHOT'
 
