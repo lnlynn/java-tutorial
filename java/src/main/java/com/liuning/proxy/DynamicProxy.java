@@ -17,6 +17,8 @@ public class DynamicProxy {
         Hello proxyHello = (Hello) Proxy.newProxyInstance(HelloImpl.class.getClassLoader(), HelloImpl.class.getInterfaces(), handler);
         // 调用代理方法
         proxyHello.sayHello();
+
+        proxyHello.sayBye();
     }
 
 }

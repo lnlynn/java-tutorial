@@ -5,5 +5,8 @@ package com.liuning.proxy;
  * @since 2020-10-27 22:22
  */
 public interface Hello {
+
     void sayHello();
+
+    void sayBye();
 }

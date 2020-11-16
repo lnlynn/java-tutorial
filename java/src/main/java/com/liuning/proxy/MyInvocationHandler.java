@@ -20,8 +20,9 @@ class MyInvocationHandler implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args)
             throws Throwable {
-        System.out.println("Invoking sayHello");
+        System.out.println("动态代理执行前");
         Object result = method.invoke(target, args);
+        System.out.println("动态代理执行后");
         return result;
     }
 }

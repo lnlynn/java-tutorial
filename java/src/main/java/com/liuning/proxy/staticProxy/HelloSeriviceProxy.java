@@ -16,4 +16,9 @@ public class HelloSeriviceProxy implements Hello {
         target.sayHello();
         System.out.println("清理数据");
     }
+
+    @Override
+    public void sayBye() {
+
+    }
 }
