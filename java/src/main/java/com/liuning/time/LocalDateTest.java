@@ -17,6 +17,9 @@ public class LocalDateTest {
 
         LocalDate localDate = LocalDate.now();
         System.out.println("当前日期：" + localDate);
+        System.out.println("年：" + localDate.getYear());
+        System.out.println("月：" + localDate.getMonthValue());
+        System.out.println("日：" + localDate.getDayOfMonth());
 
         System.out.println(LocalDate.of(2018,7,2));
         System.out.println(LocalDate.parse("2019-08-20").getDayOfMonth());
