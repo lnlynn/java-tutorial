@@ -30,6 +30,10 @@ public class MapToInt {
                 trackStatistics.getAverage(),
                 trackStatistics.getSum());
 
+        System.out.println("");
+        String str = "9444449";
+        String strr = str.substring(1, str.length()-1);
+        System.out.println(strr);
     }
 }
 
