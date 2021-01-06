@@ -39,5 +39,19 @@ public class LocalDateTest {
         MonthDay monthDayNow = MonthDay.from(LocalDate.now());
         MonthDay birthDay = MonthDay.of(12, 4);
         System.out.println(monthDayNow.equals(birthDay));
+
+        System.out.println("计算时间间隔：");
+
+        LocalDate afterDate = LocalDate.of(2021, 1, 9);
+        LocalDate beforeDate = LocalDate.of(2019, 2, 10);
+        //月数
+        long betweenMONTHS = ChronoUnit.MONTHS.between(beforeDate, afterDate);
+        //年数
+        long between1YEARS = ChronoUnit.YEARS.between(beforeDate, afterDate);
+        //天数
+        long between1DAYS = ChronoUnit.DAYS.between(beforeDate, afterDate);
+        System.out.println(betweenMONTHS);
+        System.out.println(between1YEARS);
+        System.out.println(between1DAYS);
     }
 }

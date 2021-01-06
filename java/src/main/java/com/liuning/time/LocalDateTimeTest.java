@@ -4,6 +4,7 @@ import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
@@ -30,5 +31,9 @@ public class LocalDateTimeTest {
         System.out.println(LocalDateTime.parse("2018-07-02T16:39"));
 
         System.out.println("30分钟后：" + LocalDateTime.now().plusMinutes(30));
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        LocalDateTime dateTime = LocalDateTime.parse("2018-07-02 16:39:37", formatter);
+        System.out.println("日期转换：" +dateTime);
     }
 }
