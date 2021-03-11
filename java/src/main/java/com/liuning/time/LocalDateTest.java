@@ -1,9 +1,8 @@
 package com.liuning.time;
 
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.MonthDay;
+import java.time.*;
 import java.time.temporal.ChronoUnit;
+import java.util.Date;
 
 /**
  * LocalDate
@@ -53,5 +52,9 @@ public class LocalDateTest {
         System.out.println(betweenMONTHS);
         System.out.println(between1YEARS);
         System.out.println(between1DAYS);
+
+        //Date转LocalDate
+        LocalDate date = Instant.ofEpochMilli(new Date().getTime()).atZone(ZoneId.systemDefault()).toLocalDate();
+        System.out.println(date);
     }
 }
