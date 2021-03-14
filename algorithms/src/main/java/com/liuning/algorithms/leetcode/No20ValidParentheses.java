@@ -8,7 +8,7 @@ import java.util.*;
  * @author liuning
  * @since 2021-03-13 22:21
  */
-public class N20ValidParentheses {
+public class No20ValidParentheses {
 
     public static void main(String[] args) {
 
