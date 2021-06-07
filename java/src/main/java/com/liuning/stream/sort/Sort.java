@@ -19,11 +19,12 @@ public class Sort {
         user2.setAge(57);
         user2.setBirthDay(new Date(1964, Calendar.SEPTEMBER,6));
         list.add(user2);
+
+        System.out.println("按照年龄从小到大排序结果：");
+        list.sort(Comparator.comparing(User::getAge));
         System.out.println(list);
 
-        list.sort(Comparator.comparing(User::getBirthDay));
-        System.out.println(list);
-
+        System.out.println("按照出生日期排反序：");
         List<User> sortedList = list.stream().sorted(Comparator.comparing(User::getBirthDay).reversed()).collect(Collectors.toList());
         System.out.println(sortedList);
     }
