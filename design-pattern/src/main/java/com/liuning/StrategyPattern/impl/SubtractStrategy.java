@@ -3,15 +3,15 @@ package com.liuning.StrategyPattern.impl;
 import com.liuning.StrategyPattern.Strategy;
 
 /**
- * OperationMultiply
+ * OperationSubtract
  *
  * @author liuning
  * @since 2020-09-17 23:47
  */
-public class OperationMultiply implements Strategy {
+public class SubtractStrategy implements Strategy {
 
     @Override
-    public int doOperation(int num1, int num2) {
-        return num1 * num2;
+    public int calculate(int num1, int num2) {
+        return num1 - num2;
     }
 }
